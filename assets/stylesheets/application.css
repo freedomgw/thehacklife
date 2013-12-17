@@ -13,7 +13,6 @@ html, body {
 }
 .sqltable {
 	border-collapse:collapse;
-	margin: auto;
 	font-family: Courier;
 	font-size: 1em;
 }
@@ -21,6 +20,7 @@ html, body {
 .sqltable tr, td {
 	border:1px solid black;
 	padding:5px;
+	text-align: center;
 }
 
 .header-links {
@@ -55,17 +55,8 @@ html, body {
 	margin-top: 10%;
 	margin-bottom: 10%;
 }
-.footer-small {
-	bottom: 0;
-	height: 50px;
-	left: 0;
-	position: absolute;
-	width: 100%;
-	background-color: black;
-}
 .footer {
 	bottom: 0;
-	/*height: 50px;*/
 	height: 50px;
 	left: 0;
 	width: 100%;
