@@ -40,7 +40,7 @@ __Ruby on Rails (controller code - server side (the advisor))__
 	  end
 	end
 
-AJAX is a beautiful and simple to use. I suggest that you should use this technology as much as possible for all web applications. The more you use it, the better the user experience.
+AJAX is beautiful and simple to use. I suggest EVERYONE to use this on their web applications.
 
 Cheers.
 
