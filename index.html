@@ -2,14 +2,16 @@
 	<head>
 		<title>thehacklife: hello world!</title>
 		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/application.css">
+		<script type="text/javascript" src="/assets/javascripts/jquery-2.0.3.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
 			<div class="header">
-				<div class="header-links">
+				<div id="ex5" class="header-links">
 					<a href="/">Home</a>
 					<a href="/blog.html">Blog</a>
 					<a href="/resume.html">Resume</a>
+					<!-- <a href="/about.html">Projects</a> -->
 					<a href="/about.html">About</a>
 				</div>
 			</div>
@@ -44,4 +46,10 @@
 			</div>
 		</div>
 	</body>
+	<script>
+		$( document ).ready(function() {
+			  $(".content h1").hide().slideDown(2000);
+			  $(".content p").hide().fadeIn(5000);
+		});
+	</script>
 </html>
