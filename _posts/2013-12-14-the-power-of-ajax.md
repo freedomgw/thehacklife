@@ -1,3 +1,10 @@
+---
+layout: post
+title: The Power of Ajax
+permalink: /posts/the-power-of-ajax
+author: vtruong
+---
+
 The Power of Ajax
 =================
 
