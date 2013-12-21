@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title: The Power of Ajax
 permalink: /posts/the-power-of-ajax
 author: vtruong
