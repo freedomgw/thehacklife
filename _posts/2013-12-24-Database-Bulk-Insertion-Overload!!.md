@@ -28,7 +28,7 @@ Database Bulk Insertion Overload!!
 		2. Run a data manipulation query or in this example, an INSERT SQL query
 		3. If there are no errors, commit to the database; else, rollback the transaction
 >
-> These steps can be hefty on database traffic operations because depending on the database; other incoming transactions must wait for the bulk insertion transaction to complete or if the database allows other database transactions to come through, the bulk insertion transaction will take forever to complete. After doing this brute force mysql insertion transaction, I had to find a BETTER way to this tedious task. This ONE line mysql code does exactly the job FOR YOU in a single database transaction. Your welcome.
+> These steps can be hefty on database traffic operations because depending on the database; other incoming transactions must wait for the bulk insertion transaction to complete or if the database allows other database transactions to come through, the bulk insertion transaction will take forever to complete. After doing this brute force mysql insertion transaction, I had to find a BETTER way to this tedious task. This ONE line mysql code does exactly the job FOR YOU in a single database transaction. You're welcome.
 		load data infile '/my/path/to/file.csv' fields terminated by ',' enclosed by '"' lines terminated by '\n'
 >
 > Cheers.
