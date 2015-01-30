@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <h1 id="database_bulk_insertion_overload">Database Bulk Insertion Overload!!</h1>
+
+<blockquote>
+<p>Imagine that you’re in a do or die scenario where you must insert one million records in a table and this database transaction can be done within a matter of seconds. But how exactly are we suppose to do this?</p>
+
+<p>Let us suppose that we have a table called users. Within this users table, we have column names called first_name, last_name, email, phone_no and password. We also have a CSV file that contains information found within each row that can fill each record’s field which is separated by a comma.</p>
+
+<p>For example,</p>
+</blockquote>
+
+<pre><code>	Vincent, Truong, vincentruong90@gmail.com, 1231231324, password6843
+	Bob, Smith, bsmith@gmail.com, 1231231324, pas1234sword6843</code></pre>
+
+<blockquote>
+<p>Our <em>objective</em> is to import the CSV file into the users table.</p>
+
+<p>One way of doing this is to create a script that will insert the CSV records one by one with the following SQL insert statement.</p>
+</blockquote>
+
+<pre><code>	INSERT INTO users VALUES (Vincent, Truong, vincentruong90@gmail.com, 1231231324, password6843);
+	INSERT INTO users VALUES (Bob, Smith, bsmith@gmail.com, 1231231324, pas1234sword6843);</code></pre>
+
+<blockquote>
+<p>Seems easy enough? Well imagine doing this one million times for each different record. This will take quite a bit of time because for each INSERT SQL script requires a database transaction. There are three steps are required for a database transaction to go through:</p>
+</blockquote>
+
+<pre><code>	1. Initiate the database transaction
+	2. Run a data manipulation query or in this example, an INSERT SQL query
+	3. If there are no errors, commit to the database; else, rollback the transaction</code></pre>
+
+<blockquote>
+<p>These steps can be hefty on database traffic operations because depending on the database; other incoming transactions must wait for the bulk insertion transaction to complete or if the database allows other database transactions to come through, the bulk insertion transaction will take forever to complete. After doing this brute force mysql insertion transaction, I had to find a BETTER way to this tedious task. This ONE line mysql code does exactly the job FOR YOU in a single database transaction. You’re welcome.</p>
+</blockquote>
+
+<pre><code>	load data infile &#39;/my/path/to/file.csv&#39; fields terminated by &#39;,&#39; enclosed by &#39;&quot;&#39; lines terminated by &#39;\n&#39;</code></pre>
+
+<blockquote>
+<p>Cheers.</p>
+</blockquote>
+
+    </div>
+
+  </body>
+</html>

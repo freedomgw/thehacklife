@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>thehacklife: hello world!</title>
+		<link rel="stylesheet" type="text/css" href="/assets/stylesheets/application.css">
+		<script type="text/javascript" src="/assets/javascripts/jquery-2.0.3.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<div id="ex5" class="header-links">
+					<a href="/">Home</a>
+					<a href="/blog.html">Blog</a>
+					<a href="/resume.html">Resume</a>
+					<!-- <a href="/about.html">Projects</a> -->
+					<a href="/about.html">About</a>
+				</div>
+			</div>
+			<div class="content">
+				<div class="hackcontent">
+					<h1 style="margin-bottom:60px">
+						echo "Hello World!";
+					</h1>
+					<p>
+						Hello, my name is Vincent. I am currently in my fourth year in the <span style="color:orange">computer science</span> program at the University of Waterloo.
+					</p>
+					<p>
+						In my internships, I have mastered the art of <span class="important">web</span> and <span class="important">mobile</span> development. I am a hard-ass when it comes to user-interface as well as functionality. And my favorite programming language is Python.
+					</p>
+					<p>
+						Every so often, you can find me <span style="color:green">bouldering</span> at Grand River Rocks in Waterloo or at Rock Oasis in Toronto. I also enjoy hiking; my favorite hotspot is Upper Yosemite Falls at the Yosemite National Park, California.
+					</p>
+				</div>
+			</div>
+			<div class="push"></div>
+		</div>
+		<div class="footer">
+			<div class="hackwrapper">
+				<span class="hackconnect">thehacklife &#937;</span>
+				<span class="hackimage"></span>
+				<div class="contact-links">
+					<a href="http://github.com/freedomgw"><img src="/assets/images/github_icon.png" alt="github" height="25" width="25"></a>
+					<a href="http://www.linkedin.com/pub/vincent-truong/1b/ab8/a43"><img src="/assets/images/linkedin_icon.png" alt="linkedin" height="25" width="25"></a>
+					<a href="mailto:vincentruong90@gmail.com?Subject=thehacklife" target="_top"><img src="/assets/images/gmail_icon.png" alt="github" height="25" width="25"></a>
+					<a href="https://twitter.com/vtruong90"><img src="/assets/images/twitter_icon.png" alt="twitter" height="25" width="25"></a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		$( document ).ready(function() {
+			  $(".content h1").hide().slideDown(500);
+			  $(".content p").hide().fadeIn(2000);
+		});
+	</script>
+</html>
